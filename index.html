@@ -8,19 +8,37 @@
     body {
       margin: 0;
       background-color: black;
+
+      /* ГОРИЗОНТАЛЬНОЕ выравнивание (по центру) */
       display: flex;
       justify-content: center;
-      align-items: center;
+
+      /* ВЕРТИКАЛЬНОЕ выравнивание (сейчас: вверх) */
+      align-items: flex-start; /* можно заменить на center для по центру */
+
       height: 100vh;
+
+      /* ОТСТУП сверху — поднимает/опускает логотип */
+      padding-top: 60px; /* меняй число: 0, 30, 100 и т.д. */
     }
 
     img {
-      max-width: 300px;
-      width: 80%;
+      /* МАКСИМАЛЬНАЯ ширина логотипа */
+      max-width: 200px; /* уменьши, если лого слишком большое */
+
+      /* Относительная ширина от экрана — используется при адаптации */
+      width: 60%; /* можно поставить 40%, 80% и т.д. */
+
+      /* ОТСТУПЫ слева и справа */
+      margin-left: 20px;
+      margin-right: 20px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Логотип, путь и alt можно менять -->
   <img src="assets/logotip.png" alt="SIRIUS Logo" />
+
 </body>
 </html>
