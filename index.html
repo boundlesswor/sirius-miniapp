@@ -15,14 +15,49 @@
       align-items: center;
       justify-content: flex-start;
       height: 100vh;
-      padding-top: 80px; /* Регулируй высоту логотипа */
+      padding-top: 80px;
       text-align: center;
     }
 
     .logo {
-      max-width: 160px; /* Размер логотипа */
+      max-width: 170px;
       width: 80%;
-      margin-bottom: 40px; /* Отступ снизу от логотипа */
+      margin-bottom: 40px;
+    }
+
+    .text {
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 14px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      cursor: pointer;
+      width: 220px;
+      max-width: 80%;
+    }
+
+    .btn-green {
+      background-color: #00ff5e;
+      color: black;
+      border: none;
+    }
+
+    .btn-white {
+      background-color: white;
+      color: black;
+      border: none;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
     }
   </style>
 </head>
@@ -31,10 +66,16 @@
   <!-- Логотип -->
   <img src="assets/logotip.png" alt="SIRIUS Logo" class="logo" />
 
-  <!-- Контент под логотипом -->
-  <p>Hi! This is the SIRIUS.AI mini app.<br>Here you can manage your subscription: start or cancel it.</p>
+  <!-- Описание -->
+  <p class="text">
+    Hi! This is the SIRIUS.AI mini app.<br />
+    Here you can manage your subscription: start or cancel it.
+  </p>
 
-  <!-- Кнопки можно добавить позже -->
+  <!-- Кнопки -->
+  <button class="btn btn-green">START A SUBSCRIPTION</button>
+  <button class="btn btn-white">UNSUBSCRIBE</button>
+  <button class="btn btn-outline">EXIT</button>
 
 </body>
 </html>
