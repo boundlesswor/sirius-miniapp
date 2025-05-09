@@ -22,12 +22,13 @@
       min-height: 100vh;
     }
 
-    .top-image {
-      width: 100vw;
-      height: 60vh;
-      object-fit: contain;
-      object-position: center;
-    }
+.top-image {
+  width: 100vw;         /* на всю ширину экрана */
+  height: 60vh;         /* 60% от высоты экрана */
+  object-fit: cover;    /* картинка обрежется, но будет полностью заполнять */
+  object-position: center;
+  display: block;
+}
 
     .logo {
       width: 25vw;
