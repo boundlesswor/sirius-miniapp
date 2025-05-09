@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,12 +22,12 @@
       min-height: 100vh;
     }
 
-.top-image {
-  width: 100vw;
-  height: 60vh;
-  object-fit: contain;
-  object-position: center;
-}
+    .top-image {
+      width: 100vw;
+      height: 60vh;
+      object-fit: contain;
+      object-position: center;
+    }
 
     .logo {
       width: 25vw;
@@ -45,19 +45,31 @@
       margin-bottom: 24px;
     }
 
-.btn {
-  width: 85vw;
-  max-width: 600px;
-  height: 50px;           /* фиксированная высота */
-  max-height: none;
-  font-size: clamp(16px, 5vw, 22px);
-  font-weight: 800;
-  text-transform: uppercase;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif';
-}
+    .buttons-wrapper {
+      background-color: black;
+      padding-top: 24px;
+      padding-bottom: 5vh;
+      margin-top: -10vh; /* ЭФФЕКТ: чёрный фон "заходит" на картинку */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 -10px 20px rgba(0,0,0,0.6); /* эффект "плавного перехода" */
+    }
+
+    .btn {
+      width: 85vw;
+      max-width: 600px;
+      height: 50px;
+      font-size: clamp(16px, 5vw, 22px);
+      font-weight: 800;
+      text-transform: uppercase;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+
     .btn-green {
       background-color: #55D305;
       color: #000;
@@ -72,13 +84,27 @@
   </style>
 </head>
 <body>
-  <img src="assets/half.png" alt="Top Image" class="top-image" />
-  <img src="assets/logotip.png" alt="SIRIUS Logo" class="logo" />
+  <img src="assets/half.png" alt="Верхнее изображение" class="top-image" />
+  <img src="assets/logotip.png" alt="Логотип SIRIUS" class="logo" />
   <div class="text-box">
-    Hi! This is the SIRIUS.AI mini app. Here you can manage your subscription: start or cancel it.
+    Привет! Это мини-приложение SIRIUS.AI. Здесь вы можете управлять своей подпиской: начать или отменить её.
   </div>
-  <button class="btn btn-green">Start a Subscription</button>
-  <button class="btn btn-white">Exit</button>
+
+  <div class="buttons-wrapper">
+    <button class="btn btn-green" onclick="startSubscription()">Начать подписку</button>
+    <button class="btn btn-white" onclick="exitApp()">Выйти</button>
+  </div>
+
+  <script>
+    function startSubscription() {
+      alert("Подписка запущена!");
+      // Тут может быть переход или API-запрос
+    }
+
+    function exitApp() {
+      alert("Выход из приложения");
+      // Тут можно закрыть модалку или сделать redirect
+    }
+  </script>
 </body>
 </html>
-
