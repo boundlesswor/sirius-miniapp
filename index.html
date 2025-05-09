@@ -1,80 +1,97 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIRIUS MiniApp</title>
   <style>
+    /* # ОБЩИЙ СТИЛЬ СТРАНИЦЫ */
     body {
       margin: 0;
       background-color: black;
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       height: 100vh;
       padding-top: 80px;
-      text-align: center;
     }
 
+    /* # ЛОГОТИП */
     .logo {
       max-width: 170px;
       width: 80%;
       margin-bottom: 40px;
     }
 
-    .text {
+    /* # ТЕКСТ ПО СТИЛЮ ИЗ FIGMA */
+    .text-box {
+      width: 265px;
       margin-bottom: 30px;
-      font-size: 14px;
-      line-height: 1.4;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: white;
+      line-height: 1.2;
+      text-align: justify;
     }
 
+    /* # ОБЩИЙ СТИЛЬ ДЛЯ ВСЕХ КНОПОК */
     .btn {
-      padding: 12px 24px;
-      font-size: 14px;
-      border-radius: 4px;
-      font-weight: bold;
+      border-radius: 3px;
+      font-weight: 800;
+      font-size: 10px;
+      line-height: 1;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      width: 265px;
+      padding: 10px 24px;
       margin-bottom: 12px;
       cursor: pointer;
-      width: 220px;
-      max-width: 80%;
     }
 
+    /* # КНОПКА 1 — ЗЕЛЕНАЯ */
     .btn-green {
-      background-color: #00ff5e;
-      color: black;
+      background-color: #55D305;
+      color: #000000;
       border: none;
     }
 
+    /* # КНОПКА 2 — БЕЛАЯ */
     .btn-white {
-      background-color: white;
-      color: black;
+      background-color: #ffffff;
+      color: #000000;
       border: none;
     }
 
+    /* # КНОПКА 3 — ОБВОДКА */
     .btn-outline {
       background-color: transparent;
-      color: white;
-      border: 2px solid white;
+      color: #ffffff;
+      border: 1px solid #ffffff;
     }
   </style>
 </head>
 <body>
 
-  <!-- Логотип -->
+  <!-- # ЛОГОТИП -->
   <img src="assets/logotip.png" alt="SIRIUS Logo" class="logo" />
 
-  <!-- Описание -->
-  <p class="text">
-    Hi! This is the SIRIUS.AI mini app.<br />
-    Here you can manage your subscription: start or cancel it.
-  </p>
+  <!-- # ТЕКСТ ПО СТИЛЮ FIGMA -->
+  <div class="text-box">
+    Hi! This is the SIRIUS.AI mini app. Here you can manage your subscription: start or cancel it.
+  </div>
 
-  <!-- Кнопки -->
+  <!-- # КНОПКА 1 — START A SUBSCRIPTION -->
   <button class="btn btn-green">START A SUBSCRIPTION</button>
+
+  <!-- # КНОПКА 2 — UNSUBSCRIBE -->
   <button class="btn btn-white">UNSUBSCRIBE</button>
+
+  <!-- # КНОПКА 3 — EXIT -->
   <button class="btn btn-outline">EXIT</button>
 
 </body>
