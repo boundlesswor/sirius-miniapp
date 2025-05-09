@@ -45,20 +45,19 @@
       margin-bottom: 24px;
     }
 
-    .btn {
-      width: 85vw;
-      max-width: 600px;
-      height: 12vh;
-      max-height: 100px;
-      font-size: 5vw;
-      max-font-size: 20px;
-      font-weight: 800;
-      text-transform: uppercase;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-    }
+.btn {
+  width: 85vw;
+  max-width: 600px;
+  height: 14vh;
+  max-height: 120px;
+  font-size: clamp(16px, 5vw, 22px); /* адаптивный размер шрифта */
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
 
     .btn-green {
       background-color: #55D305;
