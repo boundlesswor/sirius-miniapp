@@ -16,9 +16,16 @@
       align-items: center;
       justify-content: flex-start;
       height: 100vh;
-      padding-top: 80px;
     }
-
+    
+    /* === ФОТО === */
+    .top-image {
+      width: 100vw;
+      height: 64vh;
+      object-fit: cover;
+      display: block;
+    }
+    
     /* === ЛОГОТИП (265x85) === */
     .logo {
       width: 265px;
@@ -70,6 +77,8 @@
   </style>
 </head>
 <body>
+  <!-- ФОТО НА ВЕСЬ ВЕРХ -->
+  <img src="assets/half.png" alt="Top Image" class="top-image" />
 
   <!-- ЛОГОТИП -->
   <img src="assets/logotip.png" alt="SIRIUS Logo" class="logo" />
