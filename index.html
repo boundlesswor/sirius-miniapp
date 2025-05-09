@@ -20,15 +20,33 @@
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
-.top-image {
-  width: 100vw;         /* на всю ширину экрана */
-  height: 60vh;         /* 60% от высоты экрана */
-  object-fit: cover;    /* картинка обрежется, но будет полностью заполнять */
-  object-position: center;
-  display: block;
-}
+    .image-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    .top-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .image-wrapper::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 25vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
+    }
 
     .logo {
       width: 25vw;
@@ -50,12 +68,10 @@
       background-color: black;
       padding-top: 24px;
       padding-bottom: 5vh;
-      margin-top: -20vh; /* ЭФФЕКТ: чёрный фон "заходит" на картинку */
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 -10px 20px rgba(0,0,0,0.6); /* эффект "плавного перехода" */
     }
 
     .btn {
@@ -85,8 +101,13 @@
   </style>
 </head>
 <body>
-  <img src="assets/half.png" alt="Верхнее изображение" class="top-image" />
+
+  <div class="image-wrapper">
+    <img src="assets/half.png" alt="Верхнее изображение" class="top-image" />
+  </div>
+
   <img src="assets/logotip.png" alt="Логотип SIRIUS" class="logo" />
+
   <div class="text-box">
     Привет! Это мини-приложение SIRIUS.AI. Здесь вы можете управлять своей подпиской: начать или отменить её.
   </div>
@@ -99,12 +120,10 @@
   <script>
     function startSubscription() {
       alert("Подписка запущена!");
-      // Тут может быть переход или API-запрос
     }
 
     function exitApp() {
       alert("Выход из приложения");
-      // Тут можно закрыть модалку или сделать redirect
     }
   </script>
 </body>
