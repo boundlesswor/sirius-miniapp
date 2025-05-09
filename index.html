@@ -154,33 +154,32 @@
     <button class="btn btn-white" onclick="exitApp()">Выйти</button>
   </div>
 
-  <script>
-    // Имитируем прогресс загрузки
-    let progress = 0;
-    const loader = document.getElementById('loader-progress');
+<script>
+  window.onload = function () {
     const preloader = document.getElementById('preloader');
+    const loader = document.getElementById('loader-progress');
 
+    let progress = 0;
     const interval = setInterval(() => {
-      progress += Math.random() * 10;
+      progress += 2; // Прогресс — просто анимация до 100%
       loader.style.width = Math.min(progress, 100) + '%';
 
       if (progress >= 100) {
         clearInterval(interval);
-        setTimeout(() => {
-          preloader.style.opacity = '0';
-          preloader.style.pointerEvents = 'none';
-          setTimeout(() => preloader.remove(), 500);
-        }, 300);
+        preloader.style.opacity = '0';
+        preloader.style.pointerEvents = 'none';
+        setTimeout(() => preloader.remove(), 500);
       }
-    }, 100);
+    }, 20);
+  };
 
-    function startSubscription() {
-      alert("Подписка запущена!");
-    }
+  function startSubscription() {
+    alert("Подписка запущена!");
+  }
 
-    function exitApp() {
-      alert("Выход из приложения");
-    }
-  </script>
+  function exitApp() {
+    alert("Выход из приложения");
+  }
+</script>
 </body>
 </html>
