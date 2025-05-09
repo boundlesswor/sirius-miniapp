@@ -5,74 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SIRIUS MiniApp</title>
   <style>
-    /* === ОБЩИЙ СТИЛЬ СТРАНИЦЫ === */
-    body {
-      margin: 0;
-      background-color: black;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-    }
-    
-    /* === ФОТО === */
-    .top-image {
-      width: 100vw;
-      height: 60vh;
-      object-fit: cover;
-      display: block;
-    }
-    
-    /* === ЛОГОТИП === */
-    .logo {
-      width: 35vw;
-      height: 5.2vh;
-      object-fit: contain;
-      margin: 4vh 0 3vh; /* верхній і нижній відступи */
-    }
-    
-    /* === ТЕКСТ ПІД ЛОГО === */
-    .text-box {
-      width: 78.6vw;
-      margin-bottom: 4vh;
-      font-size: 4vw;
-      font-weight: 500;
-      line-height: 1.4;
-      text-align: justify;
-      color: white;
-    }
-    
-    /* === КНОПКИ === */
-    .btn {
-      width: 78.6vw;
-      height: 3.75vh;
-      padding: 1vh 0;
-      font-size: 3vw;
-      font-weight: 800;
-      text-transform: uppercase;
-      border-radius: 3px;
-      cursor: pointer;
-      margin-bottom: 1.5vh;
-      font-family: 'Inter', sans-serif;
-    }
-    
-    /* === КНОПКА 1 (ЗЕЛЕНА) === */
-    .btn-green {
-      background-color: #55D305;
-      color: #000000;
-      border: none;
-    }
-    
-    /* === КНОПКА 2 (БІЛА) === */
-    .btn-white {
-      background-color: #ffffff;
-      color: #000000;
-      border: none;
-    }
-  </style>
+  body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .top-image {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  .logo {
+    width: 35vw;
+    height: 5.2vh;
+    margin-top: 3.29vh; /* відступ від фото */
+    margin-bottom: 3.29vh; /* до тексту */
+    object-fit: contain;
+  }
+
+  .text-box {
+    width: 78.6vw;
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: justify;
+    color: white;
+    margin-bottom: 3.29vh; /* до кнопок */
+  }
+
+  .btn {
+    width: 78.6vw;
+    height: 3.75vh;
+    font-size: 3vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    border: none;
+  }
+
+  .btn-green {
+    background-color: #55D305;
+    color: #000000;
+    margin-bottom: 1.41vh; /* між кнопками */
+  }
+
+  .btn-white {
+    background-color: #ffffff;
+    color: #000000;
+    margin-bottom: 6.57vh; /* до низу */
+  }
+</style>
 </head>
 <body>
   <!-- ФОТО НА ВЕСЬ ВЕРХ -->
