@@ -54,26 +54,27 @@
     }
 
     .image-wrapper {
-      position: relative;
       width: 100vw;
       height: 50vh;
       overflow: hidden;
     }
-
+    
     .top-image {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
       display: block;
     }
-
+    
+    /* Нижні 50% */
     .logo {
       width: 25vw;
       max-width: 180px;
-      margin: 20px 0;
+      margin-top: 28px;
+      margin-bottom: 28px;
     }
-
+    
     .text-box {
       width: 85vw;
       max-width: 600px;
@@ -81,19 +82,17 @@
       font-weight: 500;
       line-height: 1.6;
       text-align: justify;
-      margin-bottom: 24px;
+      margin-bottom: 28px; /* від тексту до кнопок */
     }
-
+    
     .buttons-wrapper {
-      background-color: black;
-      padding-top: 24px;
-      padding-bottom: 5vh;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 7.3vh; /* ~56px */
     }
-
+    
     .btn {
       width: 85vw;
       max-width: 600px;
@@ -106,17 +105,16 @@
       cursor: pointer;
       font-family: 'Inter', sans-serif;
     }
-
+    
     .btn-green {
       background-color: #55D305;
       color: #000;
-      margin-bottom: 2vh;
+      margin-bottom: 16px;
     }
-
+    
     .btn-white {
       background-color: #fff;
       color: #000;
-      margin-bottom: 5vh;
     }
   </style>
 </head>
