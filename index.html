@@ -194,8 +194,9 @@
   }
 
   function exitApp() {
+    if (typeof Telegram !== "undefined" && Telegram.WebApp) {
       window.close();
-    }
+    } 
   }
 </script>
 </body>
