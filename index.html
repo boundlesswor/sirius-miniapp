@@ -190,11 +190,17 @@
   };
 
   function startSubscription() {
-    alert("Подписка запущена!");
+    window.location.href = 'subscription.html'; // Перехід на іншу сторінку
   }
 
   function exitApp() {
-    alert("Выход из приложения");
+    if (typeof Telegram !== "undefined" && Telegram.WebApp) {
+      Telegram.WebApp.close(); // Офіційний метод закриття WebView в Telegram
+    } else {
+      alert("Це не Telegram WebApp, не можу закрити.");
+      // fallback: window.close() може спрацювати в браузері
+      window.close();
+    }
   }
 </script>
 </body>
