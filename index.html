@@ -195,8 +195,10 @@
 
   function exitApp() {
     if (typeof Telegram !== "undefined" && Telegram.WebApp) {
-      window.close();
-    } 
+      Telegram.WebApp.close(); // Закриває Telegram WebView без повідомлень
+    } else {
+      window.close(); // Для звичайного браузера
+    }
   }
 </script>
 </body>
