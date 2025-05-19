@@ -45,10 +45,10 @@
     /* Блоки для планів */
     .plan {
       width: 100%;
-      height: 292px;
+      height: 30vh; /* Висота блоку як відсоток від висоти екрану */
       background-size: cover;
       border-radius: 10px;
-      padding: 2vw;
+      padding: 4vw; /* Відступи залежно від ширини екрану */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -66,34 +66,34 @@
     }
 
     .plan-text {
-      font-size: 10px;
+      font-size: 4vw; /* Розмір шрифту залежно від ширини екрану */
       color: #55D305;
       font-weight: 800; /* Extra Bold */
-      margin-bottom: 4px;
+      margin-bottom: 1vh; /* Відступ між текстом */
     }
 
     .plan-subtext {
-      font-size: 8px;
-      font-weight: 800; /* Extra Bold */
+      font-size: 3vw;
+      font-weight: 800;
     }
 
     .plan-title {
-      font-size: 20px;
+      font-size: 6vw; /* Розмір шрифту залежно від ширини екрану */
       font-weight: 800;
       text-transform: uppercase;
-      margin-top: 4px;
+      margin-top: 1vh;
     }
 
     .plan-description {
-      font-size: 10px;
+      font-size: 4vw;
       font-weight: 500; /* Medium */
-      margin-top: 5vh; /* Відступ від плану */
+      margin-top: 3vh;
       list-style: none;
       padding-left: 0;
     }
 
     .plan-description li {
-      margin-bottom: 10px;
+      margin-bottom: 2vw; /* Відступ між елементами */
       position: relative;
       padding-left: 20px;
     }
@@ -104,8 +104,8 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 6px;
-      height: 6px;
+      width: 1vw;
+      height: 1vw;
       border-radius: 50%;
       background-color: #55D305;
     }
@@ -113,8 +113,8 @@
     .btn {
       width: 60vw; /* 60% ширини екрану */
       max-width: 242px;
-      height: 24px;
-      font-size: 7px;
+      height: 8vh; /* Висота кнопки залежить від висоти екрану */
+      font-size: 4vw;
       font-weight: 800; /* Extra Bold */
       text-transform: uppercase;
       border-radius: 5px;
@@ -126,47 +126,11 @@
 
     /* Текст внизу */
     .footer-text {
-      font-size: 10px;
+      font-size: 4vw;
       font-weight: 500; /* Medium */
       text-transform: uppercase;
-      margin-top: 5vh;
-      margin-bottom: 5vh;
-    }
-
-    /* Медіазапити для великих екранів */
-    @media (min-width: 768px) {
-      .logo {
-        width: 137px;
-      }
-      .content-wrapper {
-        width: 301px;
-      }
-      .plan {
-        height: 292px;
-        padding: 24px;
-      }
-      .btn {
-        width: 242px;
-      }
-    }
-
-    /* Медіазапити для малих екранів */
-    @media (max-width: 393px) {
-      .logo {
-        width: 100px;
-        margin-top: 10vh;
-      }
-      .content-wrapper {
-        width: 85vw;
-        margin-top: 12vh;
-      }
-      .plan {
-        height: 250px;
-        padding: 5vw;
-      }
-      .footer-text {
-        margin-top: 10vh;
-      }
+      margin-top: 10vh;
+      margin-bottom: 10vh;
     }
   </style>
 </head>
