@@ -25,32 +25,44 @@
 
     /* Логотип */
     .logo {
-      width: 137px;
-      height: 44px;
-      margin-top: 56px;
+      width: 35vw; /* 35% від ширини екрану */
+      max-width: 137px;
+      height: auto;
+      margin-top: 8vh; /* 8% від висоти екрану */
     }
 
     /* Контейнер для блоків */
     .content-wrapper {
-      width: 301px;
-      height: 292px;
+      width: 80vw; /* 80% ширини екрану */
+      max-width: 301px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      margin-top: 56px;
+      justify-content: flex-start;
+      margin-top: 10vh;
     }
 
     /* Блоки для планів */
     .plan {
-      width: 301px;
+      width: 100%;
       height: 292px;
-      background: #1e1e1e;
+      background-size: cover;
       border-radius: 10px;
-      padding: 24px;
+      padding: 2vw;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      background-position: center;
+    }
+
+    /* Перший блок */
+    .plan-1 {
+      background-image: url('assets/earth31.png');
+    }
+
+    /* Другий блок */
+    .plan-2 {
+      background-image: url('assets/three-dimensional.jpg');
     }
 
     .plan-text {
@@ -75,8 +87,7 @@
     .plan-description {
       font-size: 10px;
       font-weight: 500; /* Medium */
-      margin-top: 54px;
-      margin-bottom: 54px;
+      margin-top: 5vh; /* Відступ від плану */
       list-style: none;
       padding-left: 0;
     }
@@ -100,7 +111,8 @@
     }
 
     .btn {
-      width: 242px;
+      width: 60vw; /* 60% ширини екрану */
+      max-width: 242px;
       height: 24px;
       font-size: 7px;
       font-weight: 800; /* Extra Bold */
@@ -117,10 +129,45 @@
       font-size: 10px;
       font-weight: 500; /* Medium */
       text-transform: uppercase;
-      margin-top: 24px;
-      margin-bottom: 24px;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
     }
 
+    /* Медіазапити для великих екранів */
+    @media (min-width: 768px) {
+      .logo {
+        width: 137px;
+      }
+      .content-wrapper {
+        width: 301px;
+      }
+      .plan {
+        height: 292px;
+        padding: 24px;
+      }
+      .btn {
+        width: 242px;
+      }
+    }
+
+    /* Медіазапити для малих екранів */
+    @media (max-width: 393px) {
+      .logo {
+        width: 100px;
+        margin-top: 10vh;
+      }
+      .content-wrapper {
+        width: 85vw;
+        margin-top: 12vh;
+      }
+      .plan {
+        height: 250px;
+        padding: 5vw;
+      }
+      .footer-text {
+        margin-top: 10vh;
+      }
+    }
   </style>
 </head>
 <body>
@@ -132,7 +179,7 @@
   <div class="content-wrapper">
 
     <!-- Перший блок плану -->
-    <div class="plan">
+    <div class="plan plan-1">
       <div class="plan-text">10$/<span class="plan-subtext">month</span></div>
       <div class="plan-title">Standard Plan</div>
       <ul class="plan-description">
@@ -145,10 +192,10 @@
     </div>
 
     <!-- Відстань між блоками -->
-    <div style="height: 54px;"></div>
+    <div style="height: 5vh;"></div>
 
-    <!-- Другий блок плану (аналогічно до першого) -->
-    <div class="plan">
+    <!-- Другий блок плану -->
+    <div class="plan plan-2">
       <div class="plan-text">10$/<span class="plan-subtext">month</span></div>
       <div class="plan-title">Standard Plan</div>
       <ul class="plan-description">
@@ -166,4 +213,3 @@
 
 </body>
 </html>
-
