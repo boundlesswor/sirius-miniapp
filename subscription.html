@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIRIUS MiniApp</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Логотип */
+    .logo {
+      width: 137px;
+      height: 44px;
+      margin-top: 56px;
+    }
+
+    /* Контейнер для блоків */
+    .content-wrapper {
+      width: 301px;
+      height: 292px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 56px;
+    }
+
+    /* Блоки для планів */
+    .plan {
+      width: 301px;
+      height: 292px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .plan-text {
+      font-size: 10px;
+      color: #55D305;
+      font-weight: 800; /* Extra Bold */
+      margin-bottom: 4px;
+    }
+
+    .plan-subtext {
+      font-size: 8px;
+      font-weight: 800; /* Extra Bold */
+    }
+
+    .plan-title {
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .plan-description {
+      font-size: 10px;
+      font-weight: 500; /* Medium */
+      margin-top: 54px;
+      margin-bottom: 54px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .plan-description li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .plan-description li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #55D305;
+    }
+
+    .btn {
+      width: 242px;
+      height: 24px;
+      font-size: 7px;
+      font-weight: 800; /* Extra Bold */
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: none;
+      background-color: #55D305;
+      color: black;
+      cursor: pointer;
+    }
+
+    /* Текст внизу */
+    .footer-text {
+      font-size: 10px;
+      font-weight: 500; /* Medium */
+      text-transform: uppercase;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Логотип -->
+  <img src="assets/logotip.png" alt="SIRIUS Logo" class="logo" />
+
+  <!-- Блоки планів -->
+  <div class="content-wrapper">
+
+    <!-- Перший блок плану -->
+    <div class="plan">
+      <div class="plan-text">10$/<span class="plan-subtext">month</span></div>
+      <div class="plan-title">Standard Plan</div>
+      <ul class="plan-description">
+        <li>Voice message recognition</li>
+        <li>Positive and aggressive communication mode</li>
+        <li>Up to 200 requests per day</li>
+        <li>Moderate level of reasoning</li>
+      </ul>
+      <button class="btn">Subscribe Now</button>
+    </div>
+
+    <!-- Відстань між блоками -->
+    <div style="height: 54px;"></div>
+
+    <!-- Другий блок плану (аналогічно до першого) -->
+    <div class="plan">
+      <div class="plan-text">10$/<span class="plan-subtext">month</span></div>
+      <div class="plan-title">Standard Plan</div>
+      <ul class="plan-description">
+        <li>Voice message recognition</li>
+        <li>Positive and aggressive communication mode</li>
+        <li>Up to 200 requests per day</li>
+        <li>Moderate level of reasoning</li>
+      </ul>
+      <button class="btn">Subscribe Now</button>
+    </div>
+  </div>
+
+  <!-- Footer text -->
+  <div class="footer-text">sirius.ai</div>
+
+</body>
+</html>
 
